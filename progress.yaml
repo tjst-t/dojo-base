@@ -1,0 +1,28 @@
+# progress.yaml - 学習進捗管理
+# 初期セットアップフロー（ワークフロー0）で対話的に初期化されます
+
+learner:
+  name: ""
+  started: null
+  skill_level: {}     # 分野ごとに自由に定義
+  goals: []           # 学習目標（ワークフロー0で設定）
+  available_time: ""  # 週あたりの学習時間目安
+
+stats:
+  total_labs: 0
+  completed: 0
+  in_progress: 0
+  total_time_spent: "0h"
+
+labs: {}
+# --- ラボごとの進捗フォーマット ---
+# 01-lab-name:
+#   status: not_started  # not_started / in_progress / completed / review_pending / review_done
+#   started: null
+#   completed: null
+#   attempts: 0
+#   hints_used: 0
+#   difficulty_felt: null  # easy / moderate / hard / struggled
+#   weak_points: []
+#   key_learnings: []
+#   time_spent: null

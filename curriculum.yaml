@@ -1,0 +1,23 @@
+# curriculum.yaml - カリキュラム定義
+# Fork先で分野に応じたラボを追加してください
+
+domain: ""          # e.g., "network", "linear-algebra", "world-history"
+description: ""     # カリキュラムの説明
+
+levels:
+  - level: 1
+    name: ""        # e.g., "基礎", "Level 1"
+    description: ""
+    labs: []
+
+# --- ラボの定義フォーマット ---
+# labs:
+#   - id: "01-lab-name"
+#     title: "ラボのタイトル"
+#     type: hands-on    # hands-on / computational / analytical
+#     difficulty: 1     # 1-5
+#     prerequisites: [] # 依存するラボIDのリスト
+#     concepts:         # このラボで学ぶ概念
+#       - "概念1"
+#       - "概念2"
+#     estimated_time: "30m"  # 目安時間

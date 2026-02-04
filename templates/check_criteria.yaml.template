@@ -1,0 +1,29 @@
+lab_id: "<XX>-<lab-name>"
+lab_type: analytical  # or computational
+
+criteria:
+  - id: 1
+    description: "<評価項目の説明>"
+    type: factual        # factual / analytical / argumentative / creative
+    weight: 1            # 重み（全criteriaの合計に対する割合で評価）
+    rubric:
+      pass: "<PASSの条件を具体的に記述>"
+      partial: "<部分点の条件>"
+      fail: "<FAILの条件>"
+
+  - id: 2
+    description: "<評価項目2>"
+    type: analytical
+    weight: 2
+    rubric:
+      pass: "<PASS条件>"
+      partial: "<部分点条件>"
+      fail: "<FAIL条件>"
+
+passing_threshold: 0.7   # weighted scoreがこの値以上でPASS
+
+evaluation_notes: |
+  この評価はClaude自身が行う。以下の点に注意:
+  - ルーブリックに記載された基準のみで判断する
+  - 学習者の表現の巧拙ではなく、概念の理解度を評価する
+  - PARTIAL判定の場合は、何が足りないかを具体的にフィードバックする

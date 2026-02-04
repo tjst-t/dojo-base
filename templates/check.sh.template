@@ -1,0 +1,31 @@
+#!/bin/bash
+# Lab <XX>: <タイトル> - 検証スクリプト
+
+PASS=0
+FAIL=0
+
+check() {
+    local description="$1"
+    local command="$2"
+    local expected="$3"
+
+    result=$(eval "$command" 2>&1)
+    if echo "$result" | grep -q "$expected"; then
+        echo "✅ PASS: $description"
+        ((PASS++))
+    else
+        echo "❌ FAIL: $description"
+        echo "   期待: $expected"
+        echo "   実際: $result"
+        ((FAIL++))
+    fi
+}
+
+# === 検証項目 ===
+# check "<説明>" "<コマンド>" "<期待される出力の一部>"
+
+echo ""
+echo "================================"
+echo "結果: $PASS passed, $FAIL failed"
+echo "================================"
+exit $FAIL
